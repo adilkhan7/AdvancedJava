@@ -1,0 +1,8 @@
+INSERT INTO "Group" VALUES (1,'CS-1905');
+
+INSERT INTO "Student" VALUES (1,'Alan','87717717171',1);
+
+SELECT "Student".id,"Student".name,"Student".phone
+FROM "Student" INNER JOIN "Group" 
+ON "Student".id = "Group".id 
+WHERE "Group".name = 'CS-1905';

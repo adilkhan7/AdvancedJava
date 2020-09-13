@@ -1,0 +1,16 @@
+CREATE TABLE Group (
+    id int NOT NULL,
+    name varchar(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE Student (
+    id int NOT NULL,
+    name varchar(255) NOT NULL,
+    phone varchar(255) NOT NULL,
+    groupId int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (groupId) REFERENCES Group(id)
+);
+
+
